@@ -26,4 +26,10 @@ public class Post {
     @Column(name = "updated_time")
     private String updated_time;
 
+    @Column(name = "good_number")
+    private Integer good_number;
+
+    @Column(name = "watch_number")
+    private Integer watch_number;
+
 }
