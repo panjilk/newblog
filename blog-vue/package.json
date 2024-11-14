@@ -12,10 +12,14 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@wangeditor/editor": "^5.1.23",
+    "@wangeditor/editor-for-vue": "^5.1.12",
+    "axios": "^1.7.7",
     "element-plus": "^2.8.7",
     "pinia": "^2.2.6",
     "vue": "^3.5.12",
-    "vue-router": "^4.4.5"
+    "vue-router": "^4.4.5",
+    "wangeditor": "^4.7.15"
   },
   "devDependencies": {
     "@eslint/js": "^9.14.0",
