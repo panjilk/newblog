@@ -134,4 +134,8 @@ public class UserController {
     public Page findAll(@RequestParam String page, @RequestParam(required = false,defaultValue = " ") String username,@RequestParam(required = false,defaultValue = " ") String id){
         return userService.findAll(page,username,id);
     }
+    @GetMapping("/123")
+    public String get(){
+        return "123";
+    }
 }
