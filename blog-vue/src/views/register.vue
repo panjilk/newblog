@@ -112,7 +112,7 @@ const submitForm = (formEl: FormInstance | undefined) => {
       }).then((res)=>{
         console.log(res.data)
         if(res.data.code == 102){
-          router.push('/main')
+          router.push('/management')
           ElMessage.success("注册成功，自动为您跳转")
           console.log(res.data.data)
           localStorage.setItem("honey-user",res.data.data.token)
