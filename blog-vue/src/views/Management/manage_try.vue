@@ -72,7 +72,6 @@
 </style>
 <script setup>
 import {
-  Document,
   Menu as IconMenu,
   Location,
   Setting,

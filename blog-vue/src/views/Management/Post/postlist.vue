@@ -20,14 +20,10 @@
 
       <el-table-column type="selection" width="55" align="center" />
       <el-table-column prop="id" label="ID" width="50" />
-        <el-table-column  label="文章头像" >
-            <template v-slot = "scope">
-                <el-image :src="scope.row.avatar" style="width: 50px; height: 50px;" />
-            </template >
-        </el-table-column>
+
       <el-table-column prop="title" label="文章标题" width="180" />
-      <el-table-column prop="author" label="作者" />
-      <el-table-column prop="time" label="修改时间" />
+      <el-table-column prop="author_id" label="作者id" />
+      <el-table-column prop="updated_time" label="修改时间" />
 
       <el-table-column label="预览">
         <template v-slot="scope">
@@ -262,7 +258,7 @@ function reset(){
 let editvisible = ref(false)
 let editposts = reactive([])
 function handleEdit(row){
-  const time = new Date();
+  const updated_time = new Date();
   editvisible.value = true
   let form = JSON.parse(JSON.stringify(row))
   editvalueHtml.value = form.content
@@ -271,7 +267,7 @@ function handleEdit(row){
       editposts.author= form.author,
       editposts.avatar= form.avatar,
       editposts.content = editvalueHtml.value,
-      editposts.time = time.toLocaleString()
+      editposts.updated_updated_time = updated_time.toLocaleString()
   console.log("EDITVALUE=",editvalueHtml.value)
 }
 function editsave(){
@@ -282,7 +278,7 @@ function editsave(){
     content: editposts.content,
     authorid: editposts.id,
     author:editposts.author,
-    time:editposts.time
+    updated_updated_time:editposts.updated_time
   }).then((res)=>{
     console.log(res.data)
     if(res.data.code === "102"){
@@ -307,7 +303,7 @@ function add() {
     title: addposts.title,
     content: text,
     author: author.value,
-    time:new Date().toLocaleString()
+    updated_time:new Date().toLocaleString()
   }).then((res) => {
     console.log("当前校验码:",res.data.code)
     if (res.data.code === "102") {

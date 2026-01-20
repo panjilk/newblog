@@ -58,6 +58,11 @@ const router = createRouter({
       name: '新版管理页面',
       component: () => import('../views/Management/manage_try.vue')
     },
+    {
+      path: '/newcontent/:id',
+      name: '',
+      component: () => import('../views/Management/Post/newcontent.vue')
+    },
 
   ],
 })

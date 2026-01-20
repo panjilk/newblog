@@ -22,8 +22,8 @@
       <el-container>
         <div>
           <el-aside style="min-height: 800px; max-width: 200px; ">
-            <el-menu active-text-color="#ffd04b" background-color="#545c64" class="el-menu-vertical-demo"
-              :collapse="flag" default-active="0" text-color="#fff" @open="handleOpen" @close="handleClose"
+            <el-menu active-background-color="#A6B3B5" active-text-color="#ffd04b" background-color="#D7E3E9" class="el-menu-vertical-demo"
+              :collapse="flag" default-active="0" text-color="black" @open="handleOpen" @close="handleClose"
               style="min-height: 100vh;">
               <el-button  style="width: 60%;height: 40px;background-color:green ;color: #ffffff;border-radius: 10%;
                   font-size: 1.1em;font-weight: 500;">
@@ -45,9 +45,9 @@
                 <el-icon>
                   <Notification />
                 </el-icon>
-                <span>博客管理</span>
+                <span>管理</span>
               </el-menu-item>
-              <el-menu-item index="3" @click="router.push('/notice')">
+              <el-menu-item index="3">
                 <el-icon>
                   <document />
                 </el-icon>
@@ -59,7 +59,7 @@
                 </el-icon>
                 <span>订单管理</span>
               </el-menu-item>
-              <el-menu-item index="5" @click="router.push('/echarts')">
+              <el-menu-item index="5">
                 <el-icon>
                   <PieChart />
                 </el-icon>
@@ -130,7 +130,7 @@ const handleClose = (key, keyPath) => {
     align-items: center;
     justify-content: space-between;
     display: flex;
-    border-radius: 5%;
+    //border-radius: 5%;
     height: 60px;
 }
 
