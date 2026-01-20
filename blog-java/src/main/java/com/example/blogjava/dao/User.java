@@ -25,4 +25,5 @@ public class User {
     private String avatar;
     @Column(name = "role")
     private String role ;
+    //123
 }
